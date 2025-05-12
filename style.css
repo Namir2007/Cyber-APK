@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background: black;
+  color: #00ffff;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 1px solid #00ffff;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #00ffff;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #01e0e0;
+}
+
+.auth-buttons .btn-register,
+.auth-buttons .btn-login {
+  padding: 10px 16px;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.btn-register {
+  background: #00ffff;
+  color: #000;
+}
+
+.btn-login {
+  background: transparent;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+}
+
+.btn-login:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  padding-top: 70px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  background: url("photos/intro_img.jpg") no-repeat center center/cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  backdrop-filter: blur(2px) brightness(0.99);
+}
+
+.intro-content,
+.intro-img {
+  position: relative;
+  z-index: 2;
+}
+
+.intro-content {
+  flex: 1;
+}
+
+.intro-content h1 {
+  font-size: 48px;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.intro-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #bfffff;
+}
+
+.btn-start {
+  padding: 12px 24px;
+  background: #00ffff;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-start:hover {
+  background: #00e0e0;
+}
+
+.intro-img {
+  flex: 1;
+}
+
+.quiz {
+  background: #000814;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.quiz h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.quiz-desc {
+  font-size: 18px;
+  color: #c0ffff;
+  margin: -30px auto 40px auto;
+  margin-bottom: 100px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.quiz-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0 10%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.quiz-card {
+  background: rgba(0, 255, 255, 0.08);
+  border: 2px solid #00ffff;
+  padding: 40px;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 15px #00ffff20;
+  color: #00ffff;
+}
+
+.quiz-card:hover {
+  background: rgba(0, 255, 255, 0.25);
+  color: #000;
+  transform: translateY(-5px);
+}
+
+.quiz-btn {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.glow {
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+}
+
+.leaderboard {
+  background: linear-gradient(180deg, #000814, #001f2f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 105vh;
+}
+
+.leaderboard-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.leaderboard h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+.leaderboard p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #c0ffff;
+}
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.player {
+  font-size: 18px;
+  background: rgba(0, 255, 255, 0.1);
+  padding: 15px;
+  border: 1px solid #00ffff;
+  border-radius: 10px;
+}
+
+.first-place {
+  background: linear-gradient(90deg, #00ffff, #006eff);
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 30px #00ffff;
+  animation: shine 2s infinite alternate;
+}
+
+.your-score {
+  margin-top: 30px;
+  font-size: 18px;
+  background: linear-gradient(90deg, #ff00c8, #00ffff);
+  color: #000;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 20px #ff00c8;
+  animation: shine 2s infinite alternate;
+}
